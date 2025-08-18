@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos</title>
+  <style>
+    /* Estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    /* Estilo da galeria */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* Cada item da galeria */
+    .gallery-item {
+      width: 200px; /* Tamanho inicial das imagens */
+      height: 200px;
+      overflow: hidden;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      position: relative;
+      transition: transform 0.3s ease; /* Transição para animação */
+    }
+
+    /* Estilo das imagens */
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* Aumenta a imagem quando clicada */
+    .gallery-item.clicked img {
+      transform: scale(1.5); /* Aumento da imagem */
+    }
+
+    /* Nome sobre a imagem */
+    .gallery-item figcaption {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo translúcido */
+      color: white;
+      font-size: 16px;
+      padding: 5px;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Estilo do botão de reiniciar galeria */
+    .reset-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-button:hover {
+      background-color: #006f8f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galeria de Fotos</h1>
+  
+  <!-- Galeria de Imagens -->
+  <div class="gallery">
+    <!-- Cada item da galeria com nome sobre a imagem -->
+    <figure class="gallery-item">
+      <img src="ADRIEL.jpg" alt="Imagem 1">
+      <figcaption>ADRIEL VINICIUS DA LUZ TOMAZ</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="BRENO.jpg" alt="Imagem 2">
+      <figcaption>BRENO FERREIRA DE BRITO</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="CARLOS.jpg" alt="Imagem 3">
+      <figcaption>CARLOS EMANUEL DA SILVA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="CLEITON.jpg" alt="Imagem 4">
+      <figcaption>CLEITON DOUGLAS ARAUJO DE SOUZA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="DEREK.jpg" alt="Imagem 5">
+      <figcaption>DEREK EDUARDO DELGADO DE SOUZA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="FALTOU.jpg" alt="Imagem 6">
+      <figcaption>FELIPE NADER DE MACEDO NEVES</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="GABRIEL.jpg" alt="Imagem 7">
+      <figcaption>GABRIEL MERICO HORT</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="FALTOU.jpg" alt="Imagem 8">
+      <figcaption>GUILHERME DOS REIS SOARES DOS SANTOS</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="GUSTAVO.jpg" alt="Imagem 9">
+      <figcaption>GUSTAVO MARTINS LYRA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="JACKSON.jpg" alt="Imagem 10">
+      <figcaption>JACKSON JOSÉ ADÃO FELIX</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="FALTOU.jpg" alt="Imagem 11">
+      <figcaption>JANAINA NUNES DA SILVA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="FALTOU.jpg" alt="Imagem 12">
+      <figcaption>JOÃO GABRIEL CARMO DE BONFIM</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="JOAO JOSE.jpg" alt="Imagem 13">
+      <figcaption>JOÃO GABRIEL JOSÉ MARTINS DE OLIVEIRA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="LEONARDO.jpg" alt="Imagem 14">
+      <figcaption>LEONARDO ANTONIO PRADO TRINDADE</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="LUCAS.jpg" alt="Imagem 15">
+      <figcaption>LUCAS CALCIOLARI CONSOLARO DOS SANTOS</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="MARIA BORZUK.jpg" alt="Imagem 16">
+      <figcaption>MARIA EDUARDA BORZUK DA FONSECA URBANSKI</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="FALTOU.jpg" alt="Imagem 17">
+      <figcaption>MARIA GABRIELA AQUINO PINHEIRO</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="MATHEUS HENRIQUE.jpg" alt="Imagem 18">
+      <figcaption>MATHEUS HENRIQUE DE CARVALHO</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="MATHEUS LOPES.jpg" alt="Imagem 19">
+      <figcaption>MATHEUS DOS SANTOS LOPES</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="RENAN.jpg" alt="Imagem 20">
+      <figcaption>RENAN STEFANI LIRA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="SABRINA.jpg" alt="Imagem 21">
+      <figcaption>SABRINA DE OLIVEIRA ALVES</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="SAMANTHA.jpg" alt="Imagem 22">
+      <figcaption>SAMANTHA CHRISTAKIS GARCIA COLUCCI</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="LOMUSK.jpg" alt="Imagem 23">
+      <figcaption>VICTOR GABRIEL DE SOUSA</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="QUEIROZ.jpg" alt="Imagem 24">
+      <figcaption>VITOR QUEIROZ DE BRITO NASCIMENTO</figcaption>
+    </figure>
+  </div>
+
+  <!-- Botão para resetar a galeria -->
+  <button class="reset-button" onclick="resetGallery()">Resetar Galeria</button>
+
+  <script>
+    // Função para alternar o tamanho das imagens
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', function() {
+        // Adiciona a classe 'clicked' para aumentar a imagem
+        this.classList.toggle('clicked');
+      });
+    });
+
+    // Função para resetar a galeria, retornando todas as imagens ao tamanho original
+    function resetGallery() {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        item.classList.remove('clicked'); // Remove a classe 'clicked' de todas as imagens
+      });
+    }
+  </script>
+
+</body>
+</html>
